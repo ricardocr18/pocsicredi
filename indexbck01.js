@@ -8,9 +8,6 @@ const port = process.env.PORT || 3000
 
 app.get('/', (req, res) => {
 
-    let watson = req.body.cnpj
-    console.log(watson)
-
     let numeroCPF = "02514635080a"
     let login = "Theo"
     let numeroCNPJ = "81824330000101"
@@ -44,19 +41,33 @@ app.get('/', (req, res) => {
         msg = `Oi ${cliente.login}, segue seu saldo 😉`
         saldo = cliente.saldo
         aviso = "Qualquer dúvida a SICREDI está a disposição no tel.: (xx) xxxx-xxxx"
-            
+        
+        console.log(msg)
+        console.log(saldo)
+        console.log(aviso)
+    
     } else if (arr.some(confirma => confirma.cnpj === numeroCNPJ)) {
         cliente = arr.find(cliente => cliente.cnpj === numeroCNPJ)
         msg = `Oi ${cliente.login}, segue seu saldo 😉`
         saldo = cliente.saldo
-        aviso = "Qualquer dúvida a SICREDI está a disposição no tel.: (xx) xxxx-xxxx" 
-
+        aviso = "Qualquer dúvida a SICREDI está a disposição no tel.: (xx) xxxx-xxxx"
+        
+        console.log(msg)
+        console.log(saldo)
+        console.log(aviso)
+    
+    
     } else {
         msg = `Não encontramos o seu cadastro ${login}  😔`
         saldo= ""
-        aviso = "Por favor, fale com nossa central de atendimento tel.: (xx) xxxx-xxxx"    
-      
-    }   
+        aviso = "Por favor, fale com nossa central de atendimento tel.: (xx) xxxx-xxxx"
+    
+        console.log(msg)
+        console.log(aviso)
+    }
+
+    let produto1 = "Get OK!!!"
+    //let produto = arr.find(produto => produto.ns === numero)
     return res.json([msg, saldo, aviso])
 
 })
