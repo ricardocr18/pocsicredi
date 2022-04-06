@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 
     let numeroCPF = "02514635080a"
     let login = "Theo"
-    let numeroCNPJ = "93710809000198"
+    let numeroCNPJ = "81824330000101"
 
     let arr = [
         {
