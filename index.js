@@ -61,7 +61,7 @@ const port = process.env.PORT || 3000
 
 // })
 
-app.get('/', (req, res) => {
+app.post('/', (req, res) => {
 
     let watson = req.body.cnpj
     console.log("Informações do Bot: " + watson)
