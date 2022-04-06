@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000
 
 app.post('/', (req, res) => {
 
-    let watson = req.body.cnpj
+    let watson = cnpj
     console.log("Informações do Bot: " + watson)
     msg = "Bot recebeu dados da API"
 
