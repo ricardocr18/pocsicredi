@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000
 app.get('/', (req, res) => {
 
     let watson = req.body.cnpj
-    console.log(watson)
+    console.log("Informações do Bot: " + watson)
 
     let numeroCPF = "02514635080a"
     let login = "Theo"
