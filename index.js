@@ -8,9 +8,9 @@ const port = process.env.PORT || 3000
 
 app.get('/', (req, res) => {
 
-    let numeroCPF = "58381533007"
+    let numeroCPF = "02514635080a"
     let login = "Theo"
-    let numeroCNPJ = "8182433000010A"
+    let numeroCNPJ = "93710809000198"
 
     let arr = [
         {
