@@ -11,7 +11,13 @@ app.post('/', (req, res) => {
 
     let watson = req.body.cnpj
     console.log("Informações do Bot: " + watson)
-    msg = "Bot recebeu dados da API"
+    msg = "Bot recebeu dados da API";
+
+    if (tipo === "x") {
+        msg2 = "você está conectado"
+    } else {
+        msg2 = " você errou mais está conectado"
+    }
 
     
     return res.json(msg)
