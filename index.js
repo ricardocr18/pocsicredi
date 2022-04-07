@@ -9,9 +9,9 @@ const port = process.env.PORT || 3000
 
 app.post('/sicrede', (req, res) => {
 
-    let watson = req.body.cnpj
-    console.log("Informações do Bot: " + watson)
-    msg = "Bot recebeu dados da API";
+    // let watson = req.body.cnpj
+    // console.log("Informações do Bot: " + watson)
+    // msg = "Bot recebeu dados da API";
 
     let arr = [
         {
@@ -33,12 +33,6 @@ app.post('/sicrede', (req, res) => {
 
     ]
 
-
-    if (tipo === "x") {
-        msg2 = "você está conectado"
-    } else {
-        msg2 = " você errou mais está conectado"
-    }
 
     
     return res.json(arr)
